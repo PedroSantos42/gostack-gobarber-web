@@ -30,17 +30,9 @@ export const Content = styled.div`
     }
   }
 
-  a {
-    color: #f4ede8;
-    display: block;
-    margin-top: 24px;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
   /* sinal de > faz com que o estilo seja aplicado somente o a diretamente dentro desse nível */
   > a {
-    color: #ff9000;
+    color: #f4ede8;
     margin-top: 24px;
     display: block;
     text-decoration: none;
@@ -48,13 +40,13 @@ export const Content = styled.div`
 
     display: flex;
     align-items: center;
+
+    &:hover {
+      color: ${shade(0.2, '#f4ede8')};
+    }
   }
   svg {
     margin-right: 16px;
-  }
-
-  &:hover {
-    color: ${shade(0.2, '#ff9000')};
   }
 `;
 
