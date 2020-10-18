@@ -21,13 +21,13 @@ export const Content = styled.div`
 `;
 
 const appearFromRight = keyframes`
-  from: {
+  from {
     opacity: 0;
-    transition: translateX(50px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
-    transition: translateX(0);
+    transform: translateX(0);
   }
 `;
 
