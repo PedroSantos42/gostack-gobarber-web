@@ -15,9 +15,9 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ messages }) => {
     messages,
     message => message.id,
     {
-      from: { right: '-120%', opacity: -1 },
+      from: { right: '-100%', opacity: -1 },
       enter: { right: '0%', opacity: 1 },
-      leave: { right: '-120%', opacity: -1 },
+      leave: { right: '-100%', opacity: -1 },
     },
   );
 
