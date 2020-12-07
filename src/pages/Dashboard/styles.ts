@@ -158,6 +158,7 @@ export const Section = styled.section`
     display: block;
     padding-bottom: 16px;
     margin-bottom: 16px;
+    margin-top: 48px;
   }
 `;
 

@@ -21,7 +21,7 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
 
-interface MonthAvailabiltyItem {
+interface MonthAvailabilityItem {
   day: number;
   available: boolean;
 }
@@ -32,8 +32,8 @@ const Dashboard: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
-  const [monthAvailability, setMonthAvailabilty] = useState<
-    MonthAvailabiltyItem[]
+  const [monthAvailability, setMonthAvailability] = useState<
+    MonthAvailabilityItem[]
   >([]);
 
   const handleDateChange = useCallback((day: Date, modifiers: DayModifiers) => {
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
         },
       })
       .then(response => {
-        setMonthAvailabilty(response.data);
+        setMonthAvailability(response.data);
       });
   }, [currentMonth, user]);
 
