@@ -44,17 +44,21 @@ export const Content = styled.div`
       font-size: 20px;
       text-align: left;
     }
-  }
 
-  a {
-    color: #f4ede8;
-    display: block;
-    margin-top: 24px;
-    text-decoration: none;
-    transition: color 0.2s;
+    a {
+      color: #f4ede8;
+      display: block;
+      margin-top: 24px;
+      text-decoration: none;
+      transition: color 0.2s;
 
-    &:hover {
-      color: ${shade(0.2, '#f4ede8')};
+      &:hover {
+        color: ${shade(0.2, '#f4ede8')};
+      }
+    }
+
+    input[name='old_password'] {
+      margin-top: 24px;
     }
   }
 `;
@@ -62,7 +66,6 @@ export const Content = styled.div`
 export const AvatarInput = styled.div`
   margin-bottom: 32px;
   position: relative;
-  width: 186px;
   align-self: center;
 
   img {
@@ -71,7 +74,7 @@ export const AvatarInput = styled.div`
     border-radius: 50%;
   }
 
-  button {
+  label {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -80,18 +83,22 @@ export const AvatarInput = styled.div`
     right: 0;
     bottom: 0;
     border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    input {
+      display: none;
+    }
 
     svg {
       width: 20px;
       height: 20px;
       color: #312e38;
     }
-
-    transition: background-color 0.2s;
 
     &:hover {
       background: ${shade(0.2, '#ff9000')};
